@@ -166,6 +166,8 @@ Android provides a `Focusable` property (`android:focusable`, `<android:focusabl
 
 You can also control focus order with the `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` attributes, typically set in the layout AXML. Use these attributes to ensure the user can navigate easily through the controls on the screen.
 
+---
+
 ### [Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/accessibility)
 
 iOS provides the `AccessibilityLabel` and `AccessibilityHint` properties.  
@@ -191,6 +193,8 @@ UIAccessibility.PostNotification (
   UIAccessibilityPostNotification.LayoutChanged,
     someControl);  // someControl gets focus
 ```
+
+---
 
 ### [Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/accessibility/index)
 
