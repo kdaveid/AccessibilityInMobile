@@ -12,7 +12,7 @@ You should make your app accessible by default because (from Apple Developer Gui
 
 - It's the right thing to do.
 ---
-> ### @icon-info-circle A definition of accessibility
+> ### A definition of accessibility
 > An application is accessible when all user interface elements with which users can interact are accessible. A user interface element is accessible when it properly reports itself as an accessibility element. 
 ---
 ### High level steps to take as a developer 
@@ -43,7 +43,7 @@ A label should:
 - Not end with a period
 - Be localized  
 
-> @icon-exclamation-triangle Don't include the type of control or view. The screen reader will include it and will otherwise read "Add button button", which is annoying. 
+> Don't include the type of control or view. The screen reader will include it and will otherwise read "Add button button", which is annoying. 
 
 **Traits** (only iOS). 
 A combination of one or more individual traits, each of which describes a single aspect of an element's state, behavior, or usage. For example, an element that behaves like a keyboard key and that is currently selected can be characterized by the combination of the Keyboard Key and Selected traits.   
@@ -74,12 +74,12 @@ see [Apples Accessibility Inspector](https://developer.apple.com/library/content
 
 For _static_ content add `attributes` to labels in the XML (i.e. `android:contentDescription`). For _dynamic_ content set the content within the logic of loading the dynamic content (using the `set..()` methods of the element, i.e. `setContentDescription()`). 
 
-|UI element type | Attribute | Setter
+|UI element type | Attribute | Setter |
 |---- | ------------ | 
-|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`
-|Decorative elements | `android:importantForAccessibility`*  | `isImportantForAccessibility()` 
-|EditText   | `android:hint` | `setHint()`       
-|View   | `android:labelFor`** | `setLabelFor()`    
+|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|
+|Decorative elements | `android:importantForAccessibility`*  | `isImportantForAccessibility()` |
+|EditText   | `android:hint` | `setHint()`|
+|View   | `android:labelFor`** | `setLabelFor()` | 
 
 \* Android 4.1+: set `android:contentDescription` to `@null`  
 ** Available only on Android 4.2+
@@ -134,11 +134,11 @@ AXML:
 ```
 For the diffent UI elements use the following properties:  
 
-|UI element type | Attribute | Setter
+|UI element type | Attribute | Setter |
 |---- | ------------ | 
-|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`
-|EditText, TextView   | `android:hint`* | `setHint()`       
-|View, input fields   | `android:labelFor`** | `setLabelFor()`  
+|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|
+|EditText, TextView   | `android:hint`* | `setHint()` |   
+|View, input fields   | `android:labelFor`** | `setLabelFor()`| 
 
 \* `Hint` will only be used in case the value of `TextView` or `EditText` is not set. 
 
@@ -170,11 +170,11 @@ You can also control focus order with the `nextFocusDown`, `nextFocusLeft`, `nex
 
 iOS provides the `AccessibilityLabel` and `AccessibilityHint` properties.  
 
-|UI element type | Property
-|---- | ------------ 
-|Control    | `userControl.AccessibilityLabel = "Hello";`
-| Control (important)|`usernameInput.Hint = "Press Enter to ...";`
-|Disable accessibility   | `someUIElem.IsAccessibilityElement = "false";`
+|UI element type | Property |
+|---- | ------------ |
+|Control    | `userControl.AccessibilityLabel = "Hello";`|
+| Control (important)|`usernameInput.Hint = "Press Enter to ...";`|
+|Disable accessibility   | `someUIElem.IsAccessibilityElement = "false";`|
 
 #### PostNotification
 A speciality of the iOS Accessibility API are the `Announcement` and `LayoutChanged` of controls that can be subscribed to in order to support accessibility even further. An announcement could me made when the UI has changed after a callback...
@@ -194,7 +194,7 @@ UIAccessibility.PostNotification (
 
 ### [Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/accessibility/index)
 
-> @icon-exclamation-triangle `AutomationProperties.IsInAccessibleTree` has to be set to `true` so the control is visible to screen readers. 
+> `AutomationProperties.IsInAccessibleTree` has to be set to `true` so the control is visible to screen readers. 
 
 _Before:_  
 ```xml
