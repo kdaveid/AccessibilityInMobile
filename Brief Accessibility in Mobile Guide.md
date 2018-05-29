@@ -74,12 +74,12 @@ see [Apples Accessibility Inspector](https://developer.apple.com/library/content
 
 For _static_ content add `attributes` to labels in the XML (i.e. `android:contentDescription`). For _dynamic_ content set the content within the logic of loading the dynamic content (using the `set..()` methods of the element, i.e. `setContentDescription()`). 
 
-|UI element type | Attribute | Setter |
-|---- | ------------ | 
-|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|
-|Decorative elements | `android:importantForAccessibility`*  | `isImportantForAccessibility()` |
-|EditText   | `android:hint` | `setHint()`|
-|View   | `android:labelFor`** | `setLabelFor()` | 
+| UI element type | Attribute | Setter |   
+| --------------- | --------- | ------ |  
+| ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|   
+| Decorative elements | `android:importantForAccessibility`*  | `isImportantForAccessibility()` |   
+| EditText   | `android:hint` | `setHint()`|  
+| View   | `android:labelFor`** | `setLabelFor()` |   
 
 \* Android 4.1+: set `android:contentDescription` to `@null`  
 ** Available only on Android 4.2+
@@ -134,11 +134,11 @@ AXML:
 ```
 For the diffent UI elements use the following properties:  
 
-|UI element type | Attribute | Setter |
-|---- | ------------ | 
-|ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|
-|EditText, TextView   | `android:hint`* | `setHint()` |   
-|View, input fields   | `android:labelFor`** | `setLabelFor()`| 
+| UI element type | Attribute | Setter |  
+| --------------- | --------- | ------ |
+| ImageView, ImageButton    | `android:contentDescription` | `setContentDescription()`|  
+| EditText, TextView   | `android:hint`* | `setHint()` |   
+| View, input fields   | `android:labelFor`** | `setLabelFor()`|  
 
 \* `Hint` will only be used in case the value of `TextView` or `EditText` is not set. 
 
@@ -170,11 +170,11 @@ You can also control focus order with the `nextFocusDown`, `nextFocusLeft`, `nex
 
 iOS provides the `AccessibilityLabel` and `AccessibilityHint` properties.  
 
-|UI element type | Property |
-|---- | ------------ |
-|Control    | `userControl.AccessibilityLabel = "Hello";`|
-| Control (important)|`usernameInput.Hint = "Press Enter to ...";`|
-|Disable accessibility   | `someUIElem.IsAccessibilityElement = "false";`|
+| UI element type | Property |  
+| --------------- | -------- |  
+| Control    | `userControl.AccessibilityLabel = "Hello";` |  
+| Control (important)|`usernameInput.Hint = "Press Enter to ...";` |  
+| Disable accessibility   | `someUIElem.IsAccessibilityElement = "false";`|  
 
 #### PostNotification
 A speciality of the iOS Accessibility API are the `Announcement` and `LayoutChanged` of controls that can be subscribed to in order to support accessibility even further. An announcement could me made when the UI has changed after a callback...
